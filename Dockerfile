@@ -1,4 +1,4 @@
-FROM node:9.11.1
+FROM node:8
 # update and upgrade packages
 RUN apt-get update -yq && apt-get upgrade -yq
 
@@ -12,7 +12,7 @@ RUN apt-get install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 lib
 RUN yarn global add firebase-tools
 
 # Install Angular CLI
-RUN yarn global add @angular/cli@6.0.8 && ng set --global packageManager=yarn
+RUN yarn global add @angular/cli@7.3.7 && ng set --global packageManager=yarn
 
 # Install puppeteer for testing
 RUN yarn global add puppeteer
